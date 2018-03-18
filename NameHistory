@@ -1,0 +1,45 @@
+{
+  "name": "namehistory",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "username",
+      "name": "Store Command Params"
+    },
+    {
+      "behavior": "0",
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.mojang.com/users/profiles/minecraft/${tempVars(\"username\")}",
+      "path": "id",
+      "storage": "1",
+      "varName": "uuid",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "behavior": "0",
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.mojang.com/user/profiles/${tempVars(\"uuid\")}/names",
+      "path": "$..name",
+      "storage": "1",
+      "varName": "past_names",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Users prior names: ${tempVars(\"past_names\")}",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "_id": "FGWOD"
+}
