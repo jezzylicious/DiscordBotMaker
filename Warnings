@@ -1,0 +1,78 @@
+{
+  "name": "Warnings",
+  "permissions": "ADMINISTRATOR",
+  "restriction": "1",
+  "actions": [
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "9",
+      "name": "Check Parameters"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "Warnings",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "Total-Warns",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "WarnReasons",
+      "defaultVal": "\"\"",
+      "storage": "1",
+      "varName2": "Reasons",
+      "name": "Store Member Data"
+    },
+    {
+      "title": "Warnings",
+      "author": "",
+      "color": "",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "Warnings-List-MSG",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "Warnings-List-MSG",
+      "message": "**${mentionedUser}**\n\n**Total Warns:**\n${tempVars(\"Total-Warns\")}\n\n**Reasons:**\n${tempVars(\"Reasons\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "Warnings-List-MSG",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "You need to mention a member!",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "_id": "AAVvi"
+}
