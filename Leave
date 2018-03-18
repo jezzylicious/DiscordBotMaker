@@ -1,0 +1,11 @@
+{
+  "name": "leave",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "kQycC",
+  "actions": [
+    {
+      "name": "Leave Voice Channel"
+    }
+  ]
+}
