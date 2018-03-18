@@ -1,0 +1,24 @@
+{
+  "name": "Nickname",
+  "permissions": "MANAGE_CHANNELS",
+  "restriction": "1",
+  "actions": [
+    {
+      "info": "0",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "nick",
+      "name": "Store Command Params"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "nickname": "${tempVars(\"nick\")}",
+      "name": "Set Member Nickname"
+    }
+  ],
+  "_id": "ywVUM",
+  "_aliases": [
+    "nick"
+  ]
+}
