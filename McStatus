@@ -1,0 +1,107 @@
+{
+  "name": "mcstatus",
+  "permissions": "NONE",
+  "restriction": "0",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "storage": "1",
+      "varName2": "bot_member",
+      "name": "Get Bot as Member"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "1",
+      "code": "new Date().getTime()\n",
+      "storage": "1",
+      "varName": "mcstatus_currenttime",
+      "name": "Run Script"
+    },
+    {
+      "member": "2",
+      "varName": "bot_member",
+      "info": "16",
+      "storage": "1",
+      "varName2": "bot_avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "bot_member",
+      "info": "3",
+      "storage": "1",
+      "varName2": "bot_name",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "bot_member",
+      "info": "4",
+      "storage": "1",
+      "varName2": "bot_color",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "author_avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "author_name",
+      "name": "Store Member Info"
+    },
+    {
+      "title": "",
+      "author": "${tempVars(\"bot_name\")} | !mcstatus",
+      "color": "${tempVars(\"bot_color\")}",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "${tempVars(\"bot_avatar\")}",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "mcstatusmsg",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "mcstatusmsg",
+      "fieldName": "DragonCraft's server status query:",
+      "message": "Bungee: **${(serverVars(\"server1_online\") ? \"Online\" : \"Offline\")}** - Players: **${serverVars(\"server1_playersnow\")}** of ${serverVars(\"server1_playersmax\")}\nCreative: **${(serverVars(\"server2_online\") ? \"Online\" : \"Offline\")}** - Players: **${serverVars(\"server2_playersnow\")}** of ${serverVars(\"server2_playersmax\")}\nLobby: **${(serverVars(\"server3_online\") ? \"Online\" : \"Offline\")}** - Players: **${serverVars(\"server3_playersnow\")}** of ${serverVars(\"server3_playersmax\")}\nPrison: **${(serverVars(\"server4_online\") ? \"Online\" : \"Offline\")}** - Players: **${serverVars(\"server4_playersnow\")}** of ${serverVars(\"server4_playersmax\")}\nSurvival: **${(serverVars(\"server5_online\") ? \"Online\" : \"Offline\")}** - Players: **${serverVars(\"server5_playersnow\")}** of ${serverVars(\"server5_playersmax\")}\nMini-Games: **${(serverVars(\"server6_online\") ? \"Online\" : \"Offline\")}** - Players: **${serverVars(\"server5_playersnow\")}** of ${serverVars(\"server6_playersmax\")}\n",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "mcstatusmsg",
+      "fieldName": "Last tested:",
+      "message": " ${Math.round((tempVars(\"mcstatus_currenttime\") - serverVars(\"mcstatus_querytime\")) / 1000,0)} seconds ago\n\n*Join Our Server By using IP `DragonCraft.Rocks`*",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "mcstatusmsg",
+      "message": "${tempVars(\"author_name\")} ",
+      "footerIcon": "${tempVars(\"author_avatar\")}",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "mcstatusmsg",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "_id": "vxNUO",
+  "comType": "0"
+}
