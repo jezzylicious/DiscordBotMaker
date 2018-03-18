@@ -5,7 +5,5 @@ We have a team who are posting updated commands and events.
 
 Folder should have the dev's name for commands and events so that we can keep track.
 
-Join 
+Join our discord server to get support and share your bot making skills.
 https://discord.gg/FNeRfJc
-
-To Share Your Code And Get Help
