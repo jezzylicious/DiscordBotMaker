@@ -1,0 +1,34 @@
+{
+  "name": "DeleteChannel",
+  "permissions": "MANAGE_CHANNELS",
+  "restriction": "1",
+  "actions": [
+    {
+      "condition": "2",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "```\nPlease mention one channel in order to delete it!\n!DeleteChannel [#channel]\n```",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "",
+      "name": "Delete Channel"
+    }
+  ],
+  "_id": "lCBMG"
+}
