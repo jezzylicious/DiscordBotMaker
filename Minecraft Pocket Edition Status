@@ -1,0 +1,130 @@
+{
+  "name": "MCPE",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "YLIHG",
+  "actions": [
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "11",
+      "name": "Check Parameters"
+    },
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "serverIp",
+      "name": "Store Command Params"
+    },
+    {
+      "behavior": "0",
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "http://pmbanners.azurewebsites.net/${tempVars(\"serverIp\")}/json",
+      "path": "offline",
+      "storage": "1",
+      "varName": "plsfgd",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "storage": "1",
+      "varName": "plsfgd",
+      "comparison": "5",
+      "value": "true",
+      "iftrue": "2",
+      "iftrueVal": "13",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "behavior": "0",
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "http://pmbanners.azurewebsites.net/${tempVars(\"serverIp\")}/json",
+      "path": "rinfo.address",
+      "storage": "1",
+      "varName": "IPADDRESS",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "behavior": "0",
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "http://pmbanners.azurewebsites.net/${tempVars(\"serverIp\")}/json",
+      "path": "cleanName",
+      "storage": "1",
+      "varName": "MOTD",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "behavior": "0",
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "http://pmbanners.azurewebsites.net/${tempVars(\"serverIp\")}/json",
+      "path": "currentPlayers",
+      "storage": "1",
+      "varName": "CURRENTPLAYERS",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "behavior": "0",
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "http://pmbanners.azurewebsites.net/${tempVars(\"serverIp\")}/json",
+      "path": "maxPlayers",
+      "storage": "1",
+      "varName": "MAXPLAYERS",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**-----------------------------------------------------**\n   **MINECRAFT POCKET EDITION STATUS**\n**-----------------------------------------------------**\n`Address`: **${tempVars(\"serverIp\")}**\n`Port`: **19132**\n`MOTD`: **${tempVars(\"MOTD\")}**\n`Current Players`: **${tempVars(\"CURRENTPLAYERS\")}**\n`Max Players`: **${tempVars(\"MAXPLAYERS\")}**",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Invalid parameters!\n\n+query (host:ip)",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "An error occurred:\n\nThe server is not reporting online and did not respond to pings.\nCheck the IP you provided to see if it's correct or not.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    }
+  ],
+  "_aliases": [
+    "query",
+    "status"
+  ]
+}
