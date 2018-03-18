@@ -1,0 +1,23 @@
+{
+  "name": "skip",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "amount": "1",
+      "name": "Skip Queue"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":white_check_mark: Skipped.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "_id": "VUrIf",
+  "_aliases": [
+    "überspringen"
+  ]
+}
