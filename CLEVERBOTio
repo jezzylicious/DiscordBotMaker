@@ -1,0 +1,79 @@
+{
+  "name": "CLEVERBOTio",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "uxrzM",
+  "actions": [
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "5",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Member Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "storage": "1",
+      "varName2": "bot",
+      "name": "Get Bot as Member"
+    },
+    {
+      "member": "2",
+      "varName": "bot",
+      "info": "1",
+      "storage": "1",
+      "varName2": "botid",
+      "name": "Store Member Info"
+    },
+    {
+      "storage": "1",
+      "varName": "id",
+      "comparison": "1",
+      "value": "tempVars(\"botid\")",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "input",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "1",
+      "varName": "input",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "behavior": "1",
+      "interpretation": "0",
+      "code": "const cleverbot = require(\"cleverbot.io\");\nCLEVERBOT = new cleverbot(\"REPLACEME\", \"REPLACEME\");\nconst session = CLEVERBOT.setNick(msg.author.tag);\n\nCLEVERBOT.create(function (err, session) {\nif(err) return console.log(\"ERROR: \" + err);\n   CLEVERBOT.ask(tempVars(\"input\"), function (err, response) {\n      if(err) return console.log(\"ERROR: \" + err);\n      msg.channel.send(response);\n   });\n});",
+      "storage": "0",
+      "varName": "reactie",
+      "name": "Run Script"
+    }
+  ],
+  "comType": "3"
+}
