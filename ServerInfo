@@ -1,0 +1,68 @@
+{
+  "name": "serverinfo",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "behavior": "0",
+      "interpretation": "1",
+      "code": " switch (msg.guild.verificationLevel) {\n    case 0: \"None\"; break;\n    case 1: \"Low\"; break;\n    case 2: \"Medium\"; break;\n    case 3: \"(╯°□°）╯︵ ┻━┻\"; break;\n    case 4: \"┻━┻︵ \\ (°□°）/ ︵ ┻━┻\"; break;\n  }\n",
+      "storage": "1",
+      "varName": "ver.level",
+      "name": "Run Script"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "switch (msg.guild.explicitContentFilter) {\n  case 0: \"Don't scan any messages\"; break;\n  case 1: \"Scan messages from members without a role\"; break;\n  case 2: \"scan messages sent by all members\"; break;\n}",
+      "storage": "1",
+      "varName": "expl.content",
+      "name": "Run Script"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "1",
+      "code": "var cd = new Date(msg.guild.createdAt);\nvar year = cd.getFullYear();\nvar month = cd.getMonth();\nvar date = cd.getDate();\nvar hours = cd.getHours();\nvar min = cd.getMinutes();\nlet cdate = year + \".\" + month + \".\" + date + \" \" + hours + \":\" + min;\n",
+      "storage": "1",
+      "varName": "cdate",
+      "name": "Run Script"
+    },
+    {
+      "title": "Server Info: __${msg.guild.name}__",
+      "author": "",
+      "color": "8000ff",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "${msg.guild.iconURL}",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "__General Info:__",
+      "message": "**Owner:** ${msg.guild.owner.displayName}\n**Available:** ${(msg.guild.available  ? \"Available\" : \"Not Available\")}\n**Region:** ${msg.guild.region} \n**Creation Date:** ${msg.guild.createdAt}\n**Verification Level:** ${tempVars(\"ver.level\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "__Misc:__",
+      "message": "**Emojis:** ${msg.guild.emojis.array().length}\n**Roles:** ${msg.guild.roles.array().length}\n**Members:** ${msg.guild.memberCount} -> Online: ${msg.guild.members.filter(m => m.user.presence.status == \"online\").size} | Offline: ${msg.guild.members.filter(m => m.user.presence.status == \"offline\").size} | Idle: ${msg.guild.members.filter(m => m.user.presence.status == \"idle\").size} | DND: ${msg.guild.members.filter(m => m.user.presence.status == \"dnd\").size}\n**Channels:** ${msg.guild.channels.array().length} -> Text: ${msg.guild.channels.findAll('type', 'text').length} | Voice: ${msg.guild.channels.findAll('type', 'voice').length}\n**AFK info:** Move to ${msg.guild.afkChannel} after ${msg.guild.afkTimeout / 60} minutes\n**Content Filter:** ${tempVars(\"expl.content\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "_id": "kVjMP"
+}
