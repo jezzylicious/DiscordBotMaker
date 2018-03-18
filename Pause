@@ -1,0 +1,20 @@
+{
+  "name": "pause",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "pfrKW",
+  "actions": [
+    {
+      "action": "1",
+      "name": "Control Audio"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Pause :ok_hand: ",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ]
+}
