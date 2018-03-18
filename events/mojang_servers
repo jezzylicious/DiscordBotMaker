@@ -1,0 +1,75 @@
+{
+  "name": "mojang_servers",
+  "temp": "120",
+  "event-type": "3",
+  "actions": [
+    {
+      "behavior": "0",
+      "interpretation": "1",
+      "code": "new Date().getTime();\n",
+      "storage": "2",
+      "varName": "mc_starttime",
+      "name": "Run Script"
+    },
+    {
+      "behavior": "0",
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://status.mojang.com/check",
+      "path": "",
+      "storage": "2",
+      "varName": "mojang_status",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "mojang_status",
+      "path": "$.[0].*",
+      "storage": "2",
+      "varName": "mojang_minecraftnet",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "mojang_status",
+      "path": "$.[2].*",
+      "storage": "2",
+      "varName": "mojang_accountminecraftnet",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "mojang_status",
+      "path": "$.[3].*",
+      "storage": "2",
+      "varName": "mojang_authmojangcom",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "mojang_status",
+      "path": "$.[4].*",
+      "storage": "2",
+      "varName": "mojang_skinsminecraftnet",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "mojang_status",
+      "path": "$.[6].*",
+      "storage": "2",
+      "varName": "mojang_sessionservermojangcom",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "mojang_status",
+      "path": "$.[7].*",
+      "storage": "2",
+      "varName": "mojang_apimojangcom",
+      "name": "Parse From Stored Json"
+    }
+  ],
+  "_id": "BMvZQ"
+}
