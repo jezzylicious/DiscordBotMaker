@@ -1,0 +1,24 @@
+{
+  "name": "Botnickname",
+  "permissions": "ADMINISTRATOR",
+  "restriction": "4",
+  "actions": [
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "nick",
+      "name": "Store Command Params"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "nickname": "${tempVars(\"nick\")}",
+      "name": "Set Bot Nickname"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ],
+  "_id": "ZnVFJ"
+}
