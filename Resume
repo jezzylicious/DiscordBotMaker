@@ -1,0 +1,20 @@
+{
+  "name": "resume",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "UXYpK",
+  "actions": [
+    {
+      "action": "2",
+      "name": "Control Audio"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":fast_forward: Resume",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ]
+}
