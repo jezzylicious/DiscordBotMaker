@@ -1,0 +1,68 @@
+{
+  "name": "Poke",
+  "permissions": "ADMINISTRATOR",
+  "restriction": "1",
+  "actions": [
+    {
+      "info": "1",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "pokesys",
+      "name": "Store Command Params"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "```\nPlease mention one user in order to poke them!\n<Poke [@user]\n```",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "maxUses": "1",
+      "lifetime": "",
+      "tempInvite": "true",
+      "unique": "true",
+      "storage": "1",
+      "varName2": "ServerPOKE",
+      "name": "Create Invite"
+    },
+    {
+      "channel": "2",
+      "varName": "",
+      "message": "You've Been Poked! ${mentionedUser}\n${tempVars(\"pokesys\")} (${member})\nCome here ---> ${tempVars(\"ServerPOKE\")}\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Your Poke Was Sent",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    }
+  ],
+  "_id": "yjaJX"
+}
