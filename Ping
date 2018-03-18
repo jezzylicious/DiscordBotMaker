@@ -1,0 +1,17 @@
+{
+  "name": "Ping",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "WXFHo",
+  "actions": [
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Your ping is **${client.ping} ms**!",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "0"
+}
