@@ -1,0 +1,80 @@
+{
+  "name": "globalannounce",
+  "temp": "",
+  "event-type": "0",
+  "actions": [
+    {
+      "title": "Streamers Community Bot Update",
+      "author": "Streamers Community Bot",
+      "color": "#8000ff",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "3",
+      "varName": "botstartingembed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "3",
+      "varName": "botstartingembed",
+      "fieldName": "Bot Information",
+      "message": "Bot Name: SC\nBot Version: 1.0.0\nBot Owner: augesrob#7267",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "info": "1",
+      "find": "bot-log",
+      "storage": "2",
+      "varName": "logchannelID",
+      "name": "Find Channel"
+    },
+    {
+      "storage": "2",
+      "varName": "logchannelID",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channelName": "bot-log",
+      "topic": "The Bot Log",
+      "position": "",
+      "storage": "0",
+      "varName": "",
+      "name": "Create Text Channel"
+    },
+    {
+      "info": "2",
+      "find": "The Bot Log",
+      "storage": "2",
+      "varName": "logchannelID",
+      "name": "Find Channel"
+    },
+    {
+      "storage": "3",
+      "varName": "botstartingembed",
+      "fieldName": "Specific Server Information",
+      "message": "Log Channel: ${serverVars(\"logchannelID\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "3",
+      "varName": "botstartingembed",
+      "channel": "6",
+      "varName2": "logchannelID",
+      "name": "Send Embed Message"
+    }
+  ],
+  "_id": "XjtTx",
+  "restriction": "0",
+  "comType": "0",
+  "permissions": "NONE"
+}
