@@ -1,0 +1,124 @@
+{
+  "name": "search",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "Ynexl",
+  "actions": [
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "search",
+      "name": "Store Command Params"
+    },
+    {
+      "condition": "0",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "```Please specify a text to search on YouTube!```",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "behavior": "0",
+      "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${tempVars(\"search\")}&key=AIzaSyBe-xX0EqAILDJc2ZNIkGkp1tgu-onEiZg",
+      "path": "items[0].snippet.title",
+      "storage": "1",
+      "varName": "title1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "behavior": "0",
+      "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${tempVars(\"search\")}&key=AIzaSyBe-xX0EqAILDJc2ZNIkGkp1tgu-onEiZg",
+      "path": "items[0].id.videoId",
+      "storage": "1",
+      "varName": "url1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "behavior": "0",
+      "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${tempVars(\"search\")}&key=AIzaSyBe-xX0EqAILDJc2ZNIkGkp1tgu-onEiZg",
+      "path": "items[1].snippet.title",
+      "storage": "1",
+      "varName": "title2",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "behavior": "0",
+      "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${tempVars(\"search\")}&key=AIzaSyBe-xX0EqAILDJc2ZNIkGkp1tgu-onEiZg",
+      "path": "items[1].id.videoId",
+      "storage": "1",
+      "varName": "url2",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "behavior": "0",
+      "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${tempVars(\"search\")}&key=YOUR_API_KEY_HERE",
+      "path": "items[2].snippet.title",
+      "storage": "1",
+      "varName": "title3",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "behavior": "0",
+      "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${tempVars(\"search\")}&key=AIzaSyBe-xX0EqAILDJc2ZNIkGkp1tgu-onEiZg",
+      "path": "items[2].id.videoId",
+      "storage": "1",
+      "varName": "url3",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "behavior": "0",
+      "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${tempVars(\"search\")}&key=AIzaSyBe-xX0EqAILDJc2ZNIkGkp1tgu-onEiZg",
+      "path": "items[3].snippet.title",
+      "storage": "1",
+      "varName": "title4",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "behavior": "0",
+      "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${tempVars(\"search\")}&key=AIzaSyBe-xX0EqAILDJc2ZNIkGkp1tgu-onEiZg",
+      "path": "items[3].id.videoId",
+      "storage": "1",
+      "varName": "url4",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "behavior": "0",
+      "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${tempVars(\"search\")}&key=YOUR_API_KEY_HERE",
+      "path": "items[4].snippet.title",
+      "storage": "1",
+      "varName": "title5",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "behavior": "0",
+      "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${tempVars(\"search\")}&key=AIzaSyBe-xX0EqAILDJc2ZNIkGkp1tgu-onEiZg",
+      "path": "items[4].id.videoId",
+      "storage": "1",
+      "varName": "url5",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "```js\nSearch Results:\n[1] ${tempVars(\"title1\")}\n[^] https://youtube.com/watch?v=${tempVars(\"url1\")}\n[2] ${tempVars(\"title2\")}\n[^] https://youtube.com/watch?v=${tempVars(\"url2\")}\n[3] ${tempVars(\"title3\")}\n[^] https://youtube.com/watch?v=${tempVars(\"url3\")}\n[4] ${tempVars(\"title4\")}\n[^] https://youtube.com/watch?v=${tempVars(\"url4\")}\n[5] ${tempVars(\"title5\")}\n[^] https://youtube.com/watch?v=${tempVars(\"url5\")}\n```",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ]
+}
