@@ -1,0 +1,130 @@
+{
+  "name": "botupdate",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "UDCRK",
+  "actions": [
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "client.users.size",
+      "storage": "1",
+      "varName": "users",
+      "name": "Run Script"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "client.guilds.size",
+      "storage": "1",
+      "varName": "guilds",
+      "name": "Run Script"
+    },
+    {
+      "activity": "2",
+      "nameText": "Help: +help - ${tempVars(\"guilds\")} servers and ${tempVars(\"users\")} users!",
+      "url": "",
+      "name": "Set Bot Activity"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Please Wait...🕛",
+      "storage": "1",
+      "varName2": "1",
+      "name": "Send Message"
+    },
+    {
+      "time": "1",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "1",
+      "message": "Please Wait...🕑",
+      "name": "Edit Message"
+    },
+    {
+      "time": "1",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "1",
+      "message": "Please Wait...🕒",
+      "name": "Edit Message"
+    },
+    {
+      "time": "1",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "1",
+      "message": "Please Wait...🕓",
+      "name": "Edit Message"
+    },
+    {
+      "time": "1",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "1",
+      "message": "Please Wait...🕕",
+      "name": "Edit Message"
+    },
+    {
+      "time": "1",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "1",
+      "name": "Delete Message"
+    },
+    {
+      "time": "5",
+      "measurement": "0",
+      "name": "Wait"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Bot status: ${tempVars(\"guilds\")} Server | ${tempVars(\"users\")} Users",
+      "storage": "1",
+      "varName2": "status",
+      "name": "Send Message"
+    },
+    {
+      "time": "2",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "status",
+      "name": "Delete Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Bot status now updated!✅",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    }
+  ],
+  "comType": "0",
+  "event-type": "1"
+}
