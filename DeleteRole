@@ -1,0 +1,42 @@
+{
+  "name": "DeleteRole",
+  "permissions": "MANAGE_ROLES",
+  "restriction": "1",
+  "actions": [
+    {
+      "condition": "3",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "```\nPlease mention one role in order to delete it!\n!DeleteRole [@role]\n```",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Role"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "{\"name\":\"Purge\",\"permissions\":\"MANAGE_MESSAGES\",\"restriction\":\"1\",\"actions\":[{\"info\":\"0\",\"infoIndex\":\"1\",\"storage\":\"1\",\"varName\":\"amount\",\"name\":\"Store Command Params\"},{\"channel\":\"0\",\"count\":\"${tempVars(\\\"amount\\\")}\",\"condition\":\"0\",\"custom\":\"\",\"varName\":\"\",\"name\":\"Delete Bulk Messages\"},{\"storage\":\"0\",\"varName\":\"\",\"name\":\"Delete Message\"},{\"channel\":\"0\",\"varName\":\"\",\"message\":\"\\nThe ${tempVars(\\\"amount\\\")} messages are removed!\\n\",\"storage\":\"1\",\"varName2\":\"remove\",\"name\":\"Send Message\"},{\"time\":\"20\",\"measurement\":\"1\",\"name\":\"Wait\"},{\"storage\":\"1\",\"varName\":\"remove\",\"name\":\"Delete Message\"}]}",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "_id": "dRHpb"
+}
