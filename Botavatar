@@ -1,0 +1,26 @@
+{
+  "name": "Botavatar",
+  "permissions": "MANAGE_MESSAGES",
+  "restriction": "4",
+  "actions": [
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "avatar",
+      "name": "Store Command Params"
+    },
+    {
+      "url": "${tempVars(\"avatar\")}",
+      "storage": "1",
+      "varName": "avatar",
+      "name": "Create Image"
+    },
+    {
+      "storage": "1",
+      "varName": "avatar",
+      "name": "Set Bot Avatar"
+    }
+  ],
+  "_id": "wljqQ"
+}
