@@ -1,0 +1,24 @@
+{
+  "name": "google",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "tVNxI",
+  "actions": [
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "search",
+      "name": "Store Command Params"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Let Me Google This For You** \nhttp://lmgtfy.com/?q=${encodeURI(tempVars(\"search\"))}",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "0"
+}
