@@ -1,0 +1,23 @@
+{
+  "name": "Botgamestatus",
+  "permissions": "ADMINISTRATOR",
+  "restriction": "4",
+  "actions": [
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "game",
+      "name": "Store Command Params"
+    },
+    {
+      "gameName": "${tempVars(\"game\")}",
+      "gameLink": "",
+      "name": "Set Bot Game"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ],
+  "_id": "bOtby"
+}
