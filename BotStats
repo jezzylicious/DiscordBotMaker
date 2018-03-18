@@ -1,0 +1,177 @@
+{
+  "name": "botstats",
+  "permissions": "NONE",
+  "restriction": "0",
+  "_id": "gjoym",
+  "actions": [
+    {
+      "title": "✨ Current Bot Stats ✨",
+      "author": "",
+      "color": "#8000ff",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "https://raw.githubusercontent.com/Nukkit/Nukkit/master/images/logo.png",
+      "storage": "1",
+      "varName": "embedmsg",
+      "name": "Create Embed Message"
+    },
+    {
+      "info": "4",
+      "storage": "1",
+      "varName2": "users",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "23",
+      "storage": "1",
+      "varName2": "days",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "24",
+      "storage": "1",
+      "varName2": "hours",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "25",
+      "storage": "1",
+      "varName2": "mins",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "1",
+      "storage": "1",
+      "varName2": "ready",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "29",
+      "storage": "1",
+      "varName2": "cpu",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "27",
+      "storage": "1",
+      "varName2": "rammb",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "3",
+      "storage": "1",
+      "varName2": "guildamount",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "17",
+      "storage": "1",
+      "varName2": "guildnames",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "storage": "1",
+      "varName": "embedmsg",
+      "fieldName": "Ready At:",
+      "message": "${tempVars(\"ready\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embedmsg",
+      "fieldName": "Bot Up Time:",
+      "message": "Days: ${tempVars(\"days\")} - Hours: ${tempVars(\"hours\")} - Minutes: ${tempVars(\"mins\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embedmsg",
+      "fieldName": "CPU Usage:",
+      "message": "${tempVars(\"cpu\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embedmsg",
+      "fieldName": "RAM Usage (MiB):",
+      "message": "${tempVars(\"rammb\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embedmsg",
+      "fieldName": "Users:",
+      "message": "${tempVars(\"users\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embedmsg",
+      "fieldName": "Bot Watches:",
+      "message": "${tempVars(\"guildamount\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "guildnames",
+      "addType": "0",
+      "position": "",
+      "value": "100",
+      "name": "Add Item to List"
+    },
+    {
+      "list": "4",
+      "varName": "",
+      "start": "",
+      "middle": "",
+      "end": "\\n",
+      "storage": "1",
+      "varName2": "guildnames",
+      "name": "Convert List to Text"
+    },
+    {
+      "storage": "1",
+      "varName": "${tempVars(\"guildnames\")}",
+      "name": "Create List"
+    },
+    {
+      "storage": "1",
+      "varName": "embedmsg",
+      "fieldName": "Guild Names:",
+      "message": "${tempVars(\"guildnames\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embedmsg",
+      "message": "© Copyrights 2018-2019 - Nukkitx.com - Developer augesrob#7267",
+      "footerIcon": "https://raw.githubusercontent.com/Nukkit/Nukkit/master/images/logo.png",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embedmsg",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embedmsg",
+      "emoji": "4",
+      "varName2": "✅",
+      "varName3": "",
+      "name": "Add Reaction"
+    }
+  ],
+  "comType": "0"
+}
