@@ -1,0 +1,50 @@
+{
+  "name": "Purge",
+  "permissions": "MANAGE_MESSAGES",
+  "restriction": "1",
+  "actions": [
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "amount",
+      "name": "Store Command Params"
+    },
+    {
+      "channel": "0",
+      "count": "${tempVars(\"amount\")}",
+      "condition": "0",
+      "custom": "",
+      "varName": "",
+      "name": "Delete Bulk Messages"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "\nThe ${tempVars(\"amount\")} messages are removed!\n",
+      "storage": "1",
+      "varName2": "remove",
+      "name": "Send Message"
+    },
+    {
+      "time": "20",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "remove",
+      "name": "Delete Message"
+    }
+  ],
+  "_id": "BnsoK",
+  "_aliases": [
+    "cc"
+  ],
+  "comType": "0"
+}
