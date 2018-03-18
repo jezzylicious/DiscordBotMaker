@@ -1,0 +1,234 @@
+{
+  "name": "mcstatusevent",
+  "permissions": "ADMINISTRATOR",
+  "restriction": "1",
+  "actions": [
+    {
+      "behavior": "0",
+      "interpretation": "1",
+      "code": "new Date().getTime();\n",
+      "storage": "2",
+      "varName": "mcstatus_querytime",
+      "name": "Run Script"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.mcsrvstat.us/1/142.44.251.80:25609",
+      "path": "",
+      "storage": "2",
+      "varName": "api_server1",
+      "debugMode": "1",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.mcsrvstat.us/1/142.44.251.80:25576",
+      "path": "",
+      "storage": "2",
+      "varName": "api_server2",
+      "debugMode": "1",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.mcsrvstat.us/1/149.56.241.15:25628",
+      "path": "",
+      "storage": "2",
+      "varName": "api_server3",
+      "debugMode": "1",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.mcsrvstat.us/1/142.4.206.183:25573",
+      "path": "",
+      "storage": "2",
+      "varName": "api_server4",
+      "debugMode": "1",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.mcsrvstat.us/1/66.70.164.92:25576",
+      "path": "",
+      "storage": "2",
+      "varName": "api_server5",
+      "debugMode": "1",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.mcsrvstat.us/1/142.44.251.80:25594",
+      "path": "",
+      "storage": "2",
+      "varName": "api_server6",
+      "debugMode": "1",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "api_server1",
+      "path": "players.online",
+      "storage": "2",
+      "varName": "server1_online",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "api_server1",
+      "path": "players.max",
+      "storage": "2",
+      "varName": "server1_playersmax",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "api_server1",
+      "path": "players.online",
+      "storage": "2",
+      "varName": "server1_playersnow",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "api_server2",
+      "path": "players.online",
+      "storage": "2",
+      "varName": "server2_online",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "api_server2",
+      "path": "players.max",
+      "storage": "2",
+      "varName": "server2_playersmax",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "api_server2",
+      "path": "players.online",
+      "storage": "2",
+      "varName": "server2_playersnow",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "api_server3",
+      "path": "players.online",
+      "storage": "2",
+      "varName": "server3_online",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "api_server3",
+      "path": "players.max",
+      "storage": "2",
+      "varName": "server3_playersmax",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "api_server3",
+      "path": "players.online",
+      "storage": "2",
+      "varName": "server3_playersnow",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "api_server4",
+      "path": "online",
+      "storage": "2",
+      "varName": "server4_online",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "api_server4",
+      "path": "players.max",
+      "storage": "2",
+      "varName": "server4_playersmax",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "api_server4",
+      "path": "players.online",
+      "storage": "2",
+      "varName": "server4_playersnow",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "api_server5",
+      "path": "online",
+      "storage": "2",
+      "varName": "server5_online",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "api_server5",
+      "path": "players.max",
+      "storage": "2",
+      "varName": "server5_playersmax",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "api_server5",
+      "path": "players.online",
+      "storage": "2",
+      "varName": "server5_playersnow",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "api_server5",
+      "path": "online",
+      "storage": "2",
+      "varName": "server6_online",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "api_server6",
+      "path": "players.max",
+      "storage": "2",
+      "varName": "server6_playersmax",
+      "name": "Parse From Stored Json"
+    },
+    {
+      "behavior": "0",
+      "jsonObjectVarName": "api_server6",
+      "path": "players.online",
+      "storage": "2",
+      "varName": "server6_playersnow",
+      "name": "Parse From Stored Json"
+    }
+  ],
+  "event-type": "3",
+  "temp": "120",
+  "_id": "zSTUj"
+}
