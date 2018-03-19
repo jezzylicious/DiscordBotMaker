@@ -1,0 +1,102 @@
+{
+  "name": "Poll",
+  "permissions": "MANAGE_MESSAGES",
+  "restriction": "4",
+  "_id": "uEjkH",
+  "actions": [
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "message",
+      "name": "Store Command Params"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "user",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "useravatar",
+      "name": "Store Member Info"
+    },
+    {
+      "info": "1",
+      "find": "poll",
+      "storage": "1",
+      "varName": "channel",
+      "name": "Find Channel"
+    },
+    {
+      "title": "✨ Poll ✨",
+      "author": "",
+      "color": "#ff0006",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "https://crusaders-gaming.co.uk/bishop-bot/wp-content/uploads/2018/03/cropped-bishopbot3.png",
+      "storage": "1",
+      "varName": "embmsg",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embmsg",
+      "fieldName": "Message:",
+      "message": "${tempVars(\"message\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embmsg",
+      "fieldName": "Posted By",
+      "message": "${tempVars(\"user\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embmsg",
+      "message": "Copyrights 2018 - JoKeR#9067 - Crusaders Gaming",
+      "footerIcon": "${tempVars(\"useravatar\")}",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embmsg",
+      "channel": "5",
+      "varName2": "channel",
+      "name": "Send Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embmsg",
+      "emoji": "4",
+      "varName2": "👍",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "storage": "1",
+      "varName": "embmsg",
+      "emoji": "4",
+      "varName2": "👎",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    }
+  ]
+}
