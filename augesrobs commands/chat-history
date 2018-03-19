@@ -1,0 +1,81 @@
+{
+  "name": "chat-history",
+  "temp": "",
+  "event-type": "37",
+  "actions": [
+    {
+      "info": "1",
+      "find": "chat-history",
+      "storage": "1",
+      "varName": "chatchannel",
+      "name": "Find Channel"
+    },
+    {
+      "storage": "1",
+      "varName": "chatchannel",
+      "comparison": "5",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable Type"
+    },
+    {
+      "title": "",
+      "author": "",
+      "color": "",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "time",
+      "name": "Create Embed Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "message": "0",
+      "varName": "chat-log",
+      "info": "4",
+      "storage": "1",
+      "varName2": "chat-log",
+      "name": "Store Message Info"
+    },
+    {
+      "message": "0",
+      "varName": "",
+      "info": "0",
+      "storage": "1",
+      "varName2": "chat-history",
+      "name": "Store Message Info"
+    },
+    {
+      "storage": "1",
+      "varName": "time",
+      "channel": "5",
+      "varName2": "chatchannel",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "5",
+      "varName": "chatchannel",
+      "message": "**Username:** ${tempVars(\"username\")} **Channel:** ${tempVars(\"chat-log\")} ${tempVars(\"chat-history\")}\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "temp2": "jserror",
+  "_id": "ZtiFF",
+  "restriction": "1",
+  "comType": "3",
+  "permissions": "SEND_MESSAGES"
+}
