@@ -1,0 +1,51 @@
+{
+  "name": "Emojis",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "UdqrW",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "info": "16",
+      "storage": "3",
+      "varName2": "roles",
+      "name": "Store Server Info"
+    },
+    {
+      "title": "✨ Current Server Emoji's ✨",
+      "author": "",
+      "color": "#ff0006",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "https://crusaders-gaming.co.uk/bishop-bot/wp-content/uploads/2018/03/cropped-bishopbot3.png",
+      "storage": "1",
+      "varName": "embmsg",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embmsg",
+      "fieldName": "Emoji's",
+      "message": "${globalVars(\"roles\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embmsg",
+      "message": "Copyrights © 2018 | JoKeR#9067 | BishopBot",
+      "footerIcon": "https://crusaders-gaming.co.uk/bishop-bot/wp-content/uploads/2018/03/cropped-bishopbot3.png",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embmsg",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
