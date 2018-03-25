@@ -1,0 +1,180 @@
+{
+  "name": "bitcoin",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "eEEFs",
+  "_timeRestriction": 2,
+  "actions": [
+    {
+      "behavior": "0",
+      "url": "https://blockchain.info/ticker?cors=true",
+      "path": "USD.last",
+      "storage": "1",
+      "varName": "rate",
+      "name": "Store Variable From WebAPI"
+    },
+    {
+      "behavior": "0",
+      "url": "https://blockchain.info/ticker?cors=true",
+      "path": "AUD.last",
+      "storage": "1",
+      "varName": "rate2",
+      "name": "Store Variable From WebAPI"
+    },
+    {
+      "behavior": "0",
+      "url": "https://blockchain.info/ticker?cors=true",
+      "path": "CAD.last",
+      "storage": "1",
+      "varName": "rate3",
+      "name": "Store Variable From WebAPI"
+    },
+    {
+      "behavior": "0",
+      "url": "https://blockchain.info/ticker?cors=true",
+      "path": "EUR.last",
+      "storage": "1",
+      "varName": "rate4",
+      "name": "Store Variable From WebAPI"
+    },
+    {
+      "behavior": "0",
+      "url": "https://blockchain.info/ticker?cors=true",
+      "path": "GBP.last",
+      "storage": "1",
+      "varName": "rate5",
+      "name": "Store Variable From WebAPI"
+    },
+    {
+      "behavior": "0",
+      "url": "https://blockchain.info/ticker?cors=true",
+      "path": "RUB.last",
+      "storage": "1",
+      "varName": "rate6",
+      "name": "Store Variable From WebAPI"
+    },
+    {
+      "behavior": "0",
+      "url": "https://blockchain.info/ticker?cors=true",
+      "path": "SEK.last",
+      "storage": "1",
+      "varName": "rate7",
+      "name": "Store Variable From WebAPI"
+    },
+    {
+      "behavior": "0",
+      "url": "https://blockchain.info/ticker?cors=true",
+      "path": "BRL.last",
+      "storage": "1",
+      "varName": "rate8",
+      "name": "Store Variable From WebAPI"
+    },
+    {
+      "behavior": "0",
+      "url": "https://blockchain.info/ticker?cors=true",
+      "path": "NZD.last",
+      "storage": "1",
+      "varName": "rate9",
+      "name": "Store Variable From WebAPI"
+    },
+    {
+      "title": "✨ Bitcoin Price Rate ✨",
+      "author": "",
+      "color": "#ff0006",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "https://crusaders-gaming.co.uk/bishop-bot/wp-content/uploads/2018/03/cropped-bishopbot3.png",
+      "storage": "1",
+      "varName": "bitcoinrate",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "bitcoinrate",
+      "fieldName": "USD (Rate)",
+      "message": "${tempVars(\"rate\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bitcoinrate",
+      "fieldName": "AUD (Rate)",
+      "message": "${tempVars(\"rate2\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bitcoinrate",
+      "fieldName": "CAD (Rate)",
+      "message": "${tempVars(\"rate3\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bitcoinrate",
+      "fieldName": "EUR (Rate)",
+      "message": "${tempVars(\"rate4\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bitcoinrate",
+      "fieldName": "GBP (Rate)",
+      "message": "${tempVars(\"rate5\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bitcoinrate",
+      "fieldName": "RUB (Rate)",
+      "message": "${tempVars(\"rate6\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bitcoinrate",
+      "fieldName": "SEK (Rate)",
+      "message": "${tempVars(\"rate7\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bitcoinrate",
+      "fieldName": "BRL (Rate)",
+      "message": "${tempVars(\"rate8\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bitcoinrate",
+      "fieldName": "BZD (Rate)",
+      "message": "${tempVars(\"rate9\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "bitcoinrate",
+      "message": "Copyrights© 2018 | JoKeR#9067 | Crusaders Gaming",
+      "footerIcon": "http://crusaders-gaming.co.uk/wp-content/uploads/2018/01/cropped-TLogo.png",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "bitcoinrate",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
