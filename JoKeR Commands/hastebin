@@ -1,0 +1,60 @@
+{
+  "name": "hastebin",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "KsPOC",
+  "actions": [
+    {
+      "storage": "0",
+      "varName": "",
+      "EliteArtzIsPro": "0",
+      "name": "Bot Typing"
+    },
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "param",
+      "name": "Store Command Params"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Generating hastebin link..",
+      "storage": "1",
+      "varName2": "test",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "time": "2",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "test",
+      "name": "Delete Message"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "const hastebin = require('hastebin-gen');\nhastebin(tempVars(\"param\"), \"js\").then(r => { msg.channel.send(\":white_check_mark: Posted text to Hastebin at this URL: \" + r); }).catch(console.error);\nmsg.channel.send(\"Command will be on cooldown for 1 minute to prevent spam!\")",
+      "storage": "0",
+      "varName": "",
+      "name": "Run Script"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "EliteArtzIsPro": "1",
+      "name": "Bot Typing"
+    }
+  ],
+  "_aliases": [],
+  "_timeRestriction": 60
+}
