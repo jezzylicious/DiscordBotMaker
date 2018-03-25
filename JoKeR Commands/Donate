@@ -1,0 +1,43 @@
+{
+  "name": "donate",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "JVCrG",
+  "actions": [
+    {
+      "title": "✨ Donate ✨",
+      "author": "",
+      "color": "#ff0006",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "https://crusaders-gaming.co.uk/bishop-bot/wp-content/uploads/2018/03/cropped-bishopbot3.png",
+      "storage": "1",
+      "varName": "embmsg",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embmsg",
+      "fieldName": "Thank You",
+      "message": "We love that you are thinking of donating. \nOnce and if you donate please let JoKeR#9067 know.\n\nRewards for donators 🎁\n\nAll donations goes towards paying the website and towards the staff of BishopBot\n\nDonation link: http://paypal.me/VisionG",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embmsg",
+      "message": "Coptyrights © 2018 | JoKeR#9067 | Crusaders Gaming",
+      "footerIcon": "http://crusaders-gaming.co.uk/wp-content/uploads/2018/01/cropped-TLogo.png",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embmsg",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
