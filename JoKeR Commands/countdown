@@ -1,0 +1,110 @@
+{
+  "name": "CountDown",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "req_time",
+      "name": "Store Command Params"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "auth_avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "auth_displayname",
+      "name": "Store Member Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "storage": "1",
+      "varName2": "bot_user",
+      "name": "Get Bot as Member"
+    },
+    {
+      "title": "🕗 Bishop Countdown 🕗",
+      "author": "",
+      "color": "#ff0006",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "${tempVars(\"auth_avatar\")}",
+      "storage": "1",
+      "varName": "embedmsg",
+      "name": "Create Embed Message"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "1",
+      "code": "var now = new Date(); \nvar then = new Date(tempVars(\"req_time\")); \nvar then_UTC = Date.UTC(then.getUTCFullYear(), then.getUTCMonth(), then.getUTCDate(),  then.getUTCHours(), then.getUTCMinutes(), then.getUTCSeconds()); \nvar now_UTC = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(),  now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds());\nvar difference = then_UTC - now_UTC;\n\nvar days = Math.floor(difference / (1000 * 60 * 60 * 24));\nvar hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));\nvar minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));\n\nthis.storeValue(difference,1,\"ck_time\",cache);\nthis.storeValue(days + \" days \" + hours + \" hours \" + minutes + \" minutes \",1,\"chng_time\",cache);",
+      "storage": "0",
+      "varName": "",
+      "name": "Run Script"
+    },
+    {
+      "storage": "1",
+      "varName": "ck_time",
+      "comparison": "0",
+      "value": "true",
+      "iftrue": "0",
+      "iftrueVal": "2",
+      "iffalse": "3",
+      "iffalseVal": "3",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "embedmsg",
+      "fieldName": "Time until your query:",
+      "message": "${tempVars(\"chng_time\")} ",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embedmsg",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "embedmsg",
+      "fieldName": "Ooopsie:",
+      "message": "Your time should be in the following format:\n`March 4, 2018 23:18:00 GMT-0500`",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embedmsg",
+      "message": "${tempVars(\"auth_displayname\")}",
+      "footerIcon": "http://crusaders-gaming.co.uk/wp-content/uploads/2018/01/cropped-TLogo.png",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embedmsg",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "_id": "IgRUm"
+}
